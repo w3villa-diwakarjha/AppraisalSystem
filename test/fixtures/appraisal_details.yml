@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appraisal: one
+  kra: one
+  appraisee_marks: 1
+  appraiser_marks: 1
+  appraiser_comments: MyText
+
+two:
+  appraisal: two
+  kra: two
+  appraisee_marks: 1
+  appraiser_marks: 1
+  appraiser_comments: MyText

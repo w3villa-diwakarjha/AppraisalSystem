@@ -1,0 +1,19 @@
+<h1>Appraisal detail </h1>
+<dl class="row">
+
+    <dt class="col-sm-3">Appraisal</dt>
+    <dd class="col-sm-9"><%=@appraisal_detail.appraisal_id%></dd>
+
+    <dt class="col-sm-3">kra:</dt>
+    <dd class="col-sm-9"><%=@appraisal_detail.kra.title%></dd>
+
+    <dt class="col-sm-3">Appraisee Marks:</dt>
+    <dd class="col-sm-9"><%=@appraisal_detail.appraisee_marks%></dd>
+
+    <dt class="col-sm-3">Appraisee Marks:</dt>
+    <dd class="col-sm-9"><%=@appraisal_detail.appraiser_marks%></dd>
+
+    
+</dl>
+
+<%=link_to 'Back to Employee', appraisal_details_path, class: 'btn btn-secondary'%>

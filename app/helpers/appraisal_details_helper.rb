@@ -1,0 +1,2 @@
+module AppraisalDetailsHelper
+end

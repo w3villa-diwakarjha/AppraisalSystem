@@ -1,0 +1,11 @@
+<h1>Edit Designation</h1>
+
+<%= form_with(model: @designation, local: true) do |form| %>
+  <div class="form-group">
+    <%= form.label :title, class: 'control-label' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <%= form.submit 'Update Designation', class: 'btn btn-primary' %>
+  <%= link_to 'Cancel', designations_path, class: 'btn btn-secondary' %>
+<% end %>

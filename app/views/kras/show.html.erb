@@ -1,0 +1,18 @@
+<h1>KRA Details</h1>
+
+<dl class="row">
+    <dt class="col-sm-3">Title:</dt>
+    <dd class="col-sm-9"><%=@kra.title%></dd>
+
+    <dt class="col-sm-3">Designation:</dt>
+    <dd class="col-sm-9"><%=@kra.designation.title%></dd>
+
+    <dt class="col-sm-3">Description:</dt>
+    <dd class="col-sm-9"><%=@kra.description%></dd>
+
+    <dt class="col-sm-3">Max_marks:</dt>
+    <dd class="col-sm-9"><%=@kra.max_marks%></dd>
+
+</dl>
+
+<%=link_to 'Back to Employee', kras_path, class: 'btn btn-secondary'%>

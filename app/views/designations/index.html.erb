@@ -1,0 +1,22 @@
+<h1>Designations</h1>
+<%= link_to 'New Designation', new_designation_path, class: 'btn btn-primary mb-3' %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @designations.each do |designation| %>
+      <tr>
+        <td><%= designation.title %></td>
+        <td>
+          <%= link_to 'Show', designation, class: 'btn btn-info' %>
+          <%= link_to 'Edit', edit_designation_path(designation), class: 'btn btn-warning' %>
+          <%= link_to 'Delete', designation, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,30 @@
+<h1>Appraisal details</h1>
+
+<%=link_to 'New Appraisal Detail', new_appraisal_detail_path, class: 'btn btn-primary mb-3'%>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Appraisal</th>
+            <th>KRA</th>
+            <th>Appraisee Marks</th>
+            <th>Appraiser Marks</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%@appraisal_details.each do |appraisal_detail|%>
+        <tr>
+            <td><%=appraisal_detail.appraisal_id%></td>
+            <td><%=appraisal_detail.kra.title%></td>
+            <td><%=appraisal_detail.appraisee_marks%></td>
+            <td><%=appraisal_detail.appraiser_marks%></td>
+            <td>
+                <%=link_to 'Show', appraisal_detail, class: 'btn btn-info btn'%>
+                <%=link_to 'Edit', edit_appraisal_detail_path(appraisal_detail), class: 'btn btn-warning btn'%>
+                <%=link_to 'Delete', appraisal_detail, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn'%>
+            </td>
+        </tr>
+        <%end%>
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+<%=form_with(model: appraisal, local: true) do |form|%>
+    <div class="form-group">
+        <%=form.label :appraisee_id, 'Employee', class: 'control-label'%>
+        <%=form.collection_select :appraisee_id, Employee.where(role: 'Appraisee'), :id, :name, {prompt: 'Select Employee'}, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+        <%=form.label :period_start, 'Appraisal Period (start)', class: 'control-label'%>
+        <%=form.date_field :period_start, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+        <%=form.label :period_end, 'Appraisal Period (END)', class: 'control-label'%>
+        <%=form.date_field :period_end, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+        <%=form.label :appraisee_comments, 'Appraisee Comments', class: 'control-label' %>
+        <%=form.text_area :appraisee_comments, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+        <%=form.label :appraiser_id, 'Appraiser', class: 'control-label'%>
+        <%=form.collection_select :appraiser_id, Employee.where(role: 'Appraiser'), :id, :name, {prompt: 'Select Appraiser'}, class: 'form-control'%>
+    </div>
+
+    <%=form.submit 'Save', class: 'btn btn-primary'%>
+<%end%>

@@ -1,0 +1,29 @@
+<h1>Key Result Areas </h1>
+<%= link_to 'New KRA', new_kra_path, class: 'btn btn-primary mb-3'%>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Designation</th>
+            <th>Description</th>
+            <th>Max Marks</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%@kras.each do |kra| %>
+            <tr>
+                <td><%=kra.title%></td>
+                <td><%=kra.designation.title%>
+                <td><%=kra.description%></td>
+                <td><%=kra.max_marks%></td>
+                <td>
+                    <%=link_to 'Show', kra, class: 'btn btn-info'%>
+                    <%=link_to 'Edit', edit_kra_path(kra), class: 'btn btn-warning btn'%>
+                    <%=link_to 'Delete', kra, method: :delete, data: {confirm: 'Are You Sure?'}, class: 'btn btn-danger btn'%>
+                </td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>
+        
